@@ -234,70 +234,28 @@
                     <div class="mbr-gallery-layout-default">
                         <div>
                             <div>
+                            <?php
+                            require "php/conn.php";
+                            $mysql = "select * from product";
+                            $result = $conection->query($mysql);
+
+                            if ($result->num_rows > 0) {
+                                $number = 0;
+                            while ($row = $result->fetch_assoc()) { 
+                                
+                                ?>
                                 <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery1-6" data-slide-to="0" data-toggle="modal">
-                                        <img src="assets/images/gallery00.jpg" alt="">
+                                    <div href="#lb-gallery1-6" data-slide-to="<?php echo $number ?>" data-toggle="modal">
+                                        <img src="assets/images/<?php echo $row['id'] ;?>.jpg" alt="">
                                         <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Wireless <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
+                                        <span class="mbr-gallery-title mbr-fonts-style display-7"><?php echo $row['product_name'];?> <br>
+                                            <small>Price <strong style="color: red;"><?php echo $row['price'] ;?>/-</strong></small></span>
                                     </div>
                                 </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Responsive">
-                                    <div href="#lb-gallery1-6" data-slide-to="1" data-toggle="modal">
-                                        <img src="assets/images/malte-wingen-381988-1920x1280-800x533.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Touch Control <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Creative">
-                                    <div href="#lb-gallery1-6" data-slide-to="2" data-toggle="modal">
-                                        <img src="assets/images/gallery02.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7"> Sweat-resistant <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Animated">
-                                    <div href="#lb-gallery1-6" data-slide-to="3" data-toggle="modal">
-                                        <img src="assets/images/malte-wingen-382148-1920x1280-800x533.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">Moisture Protection <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery1-6" data-slide-to="4" data-toggle="modal">
-                                        <img src="assets/images/gallery00-1200x800-800x533.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">On Ear Control <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery1-6" data-slide-to="5" data-toggle="modal">
-                                        <img src="assets/images/malte-wingen-381988-1920x1280-800x533.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">High Quality Audio <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Responsive">
-                                    <div href="#lb-gallery1-6" data-slide-to="6" data-toggle="modal">
-                                        <img src="assets/images/gallery02-1200x800-800x533.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">30 Hr Power <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
-                                    </div>
-                                </div>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Animated">
-                                    <div href="#lb-gallery1-6" data-slide-to="7" data-toggle="modal">
-                                        <img src="assets/images/malte-wingen-382148-1920x1280-800x533.jpg" alt="">
-                                        <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7">100 GB Memory <br>
-                                            <small>Price <strong style="color: red;">300/-</strong></small></span>
-                                    </div>
-                                </div>
+                                <?php  $number = $number +1 ;
+                                }
+                            } ?>
+                               
                             </div>
                         </div>
                         <div class="clearfix">
@@ -306,35 +264,35 @@
                     </div>
                 </div>
                 <!-- Lightbox -->
+                <?php
+                            $mysql = "select * from product";
+                            $result = $conection->query($mysql);
+                            if ($result->num_rows > 0) {
+                                $totalrows  = mysqli_num_rows($result) ;
+                                $number = 1 ; ?>
                 <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery1-6">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-body">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery00.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/malte-wingen-381988-1920x1280.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery02.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/malte-wingen-382148-1920x1280.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery00-1200x800.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/malte-wingen-381988-1920x1280.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="assets/images/gallery02-1200x800.jpg" alt="">
-                                    </div>
-                                    <div class="carousel-item active">
-                                        <img src="assets/images/malte-wingen-382148-1920x1280.jpg" alt="">
-                                    </div>
+                                <?php
+                            while ($row = $result->fetch_assoc()) { 
+                                
+                               
+                                    if( $number == $totalrows ){
+                                        echo "<div class='carousel-item active'>
+                                        <img src=assets/images/".$row['id'].".jpg >
+                                        </div>" ; 
+                                    }
+                                    else{
+                                        echo "<div class='carousel-item'>
+                                        <img src=assets/images/".$row['id'] .".jpg >
+                                        </div>" ;
+                                    }
+                                    $number = $number +1 ;
+                                }
+                                      
+                        } ?>
                                 </div>
                                 <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery1-6">
                                     <span class="mbri-left mbr-iconfont" aria-hidden="true"></span>

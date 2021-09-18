@@ -48,15 +48,13 @@ require 'php/addproduct.php'
                     <a class="nav-link link text-black display-4" href="#home">
                         Home
                     </a>
-                    <a class="nav-link link text-black display-4" href="#about">
-                        About
+                    <a class="nav-link link text-black display-4" href="#add-product">
+                        Add Product
                     </a>
-                    <a class="nav-link link text-black display-4" href="#service">
-                        Services
+                    <a class="nav-link link text-black display-4" href="#data">
+                        Product Data
                     </a>
-                    <a class="nav-link link text-black display-4" href="#contact">
-                        Contact us
-                    </a>
+                    
                 </li>		
 		
 			</ul>
@@ -79,7 +77,7 @@ require 'php/addproduct.php'
                     </a>
                 </div>    
             </div>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" href="#">logout</a></div>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" href="index.php">logout</a></div>
      
     </nav>
 </section>
@@ -92,7 +90,7 @@ require 'php/addproduct.php'
                 <div class="mbr-white col-md-12">
                     <h1 class="mbr-section-title mbr-white mbr-fonts-style align-left display-1"><strong>Admin Pannel</strong></h1>
                     
-                    <div class="mbr-section-btn align-left"><a class="btn btn-lg btn-white display-4" href="#">Add Product Now</a></div>
+                    <div class="mbr-section-btn align-left"><a class="btn btn-lg btn-white display-4" href="#add-product">Add Product Now</a></div>
                 </div>
            
             </div>
@@ -160,7 +158,7 @@ require 'php/addproduct.php'
     <div class="container" id="data">
         <div class="row justify-content-center">
             <div class="col-12 col-md-12 align-center">
-                <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">Product Table</h2>
+                <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">Product Data</h2>
             </div>
             
         </div>
@@ -180,31 +178,36 @@ require 'php/addproduct.php'
                         <thead>
                             <tr class="bg-warning">
                                 <th>#</th>
-                                <th>ID</th>
+                                <th>Product ID</th>
                                 <th>Product Name</th>
-                                <th>Product Image</th>
+                                <th>Product Price</th>
                                 <th>Update</th>
                                 <th>Delete</th>
                             </tr>
                         </thead>
-                        
+                        <!--Contact table to database  -->
                         <tbody>
+                        <?php
+                            require "php/conn.php";
+                            $mysql = "select * from product";
+                            $result = $conection->query($mysql);
+
+                            if ($result->num_rows > 0) {
+                                $number = 1;
+                            while ($row = $result->fetch_assoc()) { 
+                                
+                                ?>
                             <tr>
-                                <td  class="align-middle">1</td>
-                                <td  class="align-middle">00</td>
-                                <td  class="align-middle">Product-1</td>
-                                <td  class="align-middle">Image-1</td>
+                                <td  class="align-middle"><?php echo $number ;?></td>
+                                <td  class="align-middle"><?php echo $row['id'] ;?></td>
+                                <td  class="align-middle"><?php echo $row['product_name'] ;?></td>
+                                <td  class="align-middle"><?php echo $row['price'] ;?></td>
                                 <td><div class="mbr-section-btn"><a class="btn btn-sm btn-info   display-4" href="#">Update</a></div></td>
                                 <td><div class="mbr-section-btn"><a class="btn btn-sm btn-warning display-4" href="#">Remove</a></div></td>
                             </tr>
-                            <tr>
-                                <td  class="align-middle">2</td>
-                                <td  class="align-middle">10</td>
-                                <td  class="align-middle">Product-2</td>
-                                <td  class="align-middle">Image-2</td>
-                                <td><div class="mbr-section-btn"><a class="btn btn-sm btn-info   display-4" href="#">Update</a></div></td>
-                                <td><div class="mbr-section-btn"><a class="btn btn-sm btn-warning display-4" href="#">Remove</a></div></td>
-                            </tr>
+                            <?php  $number = $number +1 ;
+                                }
+                            } ?>
                             
                         </tbody>
                     
