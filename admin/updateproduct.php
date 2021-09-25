@@ -1,6 +1,4 @@
-<?php
-require 'php/addproduct.php'
-?>
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -49,9 +47,9 @@ require 'php/addproduct.php'
                         Home
                     </a>
                     <a class="nav-link link text-black display-4" href="#add-product">
-                        Add Product
+                        Update Product
                     </a>
-                    <a class="nav-link link text-black display-4" href="#data">
+                    <a class="nav-link link text-black display-4" href="admin.php">
                         Product Data
                     </a>
                     
@@ -90,7 +88,7 @@ require 'php/addproduct.php'
                 <div class="mbr-white col-md-12">
                     <h1 class="mbr-section-title mbr-white mbr-fonts-style align-left display-1"><strong>Admin Pannel</strong></h1>
                     
-                    <div class="mbr-section-btn align-left"><a class="btn btn-lg btn-white display-4" href="#add-product">Add Product Now</a></div>
+                    <div class="mbr-section-btn align-left"><a class="btn btn-lg btn-white display-4" href="#add-product">Update Product Now</a></div>
                 </div>
            
             </div>
@@ -107,119 +105,97 @@ require 'php/addproduct.php'
     <div class="container" id="add-product">
         <div class="row justify-content-center">
             <div class="col-12 col-md-12 align-center">
-                <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">Add Product</h2>
+                <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">Update Product</h2>
             </div>
         </div>
     </div>
 </section>
 <!-- tittle section end -->
+<?php
+         
+         $id =  $_GET['id'] ;
+      
+         require 'php/conn.php' ;
+         $sql = "select * from product where id={$id}" ;
+         $result = $conection -> query($sql);
+       
+             while($row = $result->fetch_assoc()){
 
-<!-- Add Product Section -->
+                     
+                     $name = $row['product_name'] ;
+                     $price = $row['price'] ;
+                     $imgname = $row['image'] ;
+                   
+ 
+             } ?>
+<!-- Update Product Section -->
 <section class="features19 cid-qIjES4e5vV" id="features19-5" data-sortbtn="btn-primary">
   
     <div class="container" id="add">
         <h2 class="mbr-section-title align-left mbr-fonts-style display-2">
-            Add Product 🔥</h2>
+            Update Product 🔥</h2>
             <div class="container">
-                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post" enctype="multipart/form-data">
+                <form action="" method="post" enctype="multipart/form-data">
                   <div class="form-row">
                     <div class="form-group col-md-6">
-                      <input type="text" class="form-control" name="name" id="inputtext" placeholder="PRODUCT NAME">
+                      <input type="text" class="form-control" name="name" id="inputtext" placeholder="<?php  echo $name ; ?>">
                     </div>
           
                     <div class="form-group col-md-6">
-                      <input type="price" class="form-control" name="price" id="inputprice" placeholder="PRODUCT PRICE">
+                      <input type="price" class="form-control" name="price" id="inputprice" placeholder="<?php  echo $price ; ?>">
                     </div>
                   </div>
                   <div class="form-row">
                     <div class="form-group col-md-6">
           
                       <div class="form-group">
-                        <label for="">PRODUCT IMAGE</label>
+                        <label for=""><?php  echo $imgname ; ?></label>
                         <a class="form-control btn-secondary" style=" display: inline-block ; width: auto;" onclick="document.getElementById('getFile').click()">Browser..</a>
                         <input type='file' id="getFile" style="display:none" name="image">
                       </div>
                     </div>
                     <div class="form-group col-md-6">
-                      <input type="submit" class="form-control btn-secondary" name="submit" value="ADD PRODUCT">
+                      <input type="submit" class="form-control btn-secondary" name="submit" value="UPDATE PRODUCT">
                     </div>
                   </div>
               </div>
 
-        
+              <?php
+                if(isset($_POST['submit'])){
+      
+              $name = test_input($_POST["name"]);;
+              $price = test_input($_POST["price"]);
+              $imgname = $_FILES["image"]["name"] ; 
+              $tmploc = $_FILES["image"]["tmp_name"] ; 
+         
+             
+         
+         
+              
+      
+              $mysql = "UPDATE `product` SET `product_name` = '{$name}' , `price` = '{$price}' , `image` = '{$imgname}'  WHERE `product`.`id` = '{$id}'"; 
+                    if($conection->query($mysql) === true){
+                      move_uploaded_file($tmploc ,'assets/images/'.$id. '.jpg');     
+                        echo "<script type='text/javascript'> alert( 'Record Updated successfully'); </script>" ;
+                        
+                    } else {
+                      echo "Error: " . $mysql . "<br>" . $conection->error;
+                    } 
+            }
+           
+                function test_input($data) {
+                  $data = trim($data);
+                  $data = stripslashes($data);
+                  $data = htmlspecialchars($data);
+                  return $data;
+                } 
+            ?>
        
     </div>
 </section>
-<!-- Add Product Section End -->
+<!-- Update Product Section End -->
 
 <!-- ---------------------------------------------------------------------------------------------------------------- -->
-<!-- tittle Table -->
-<section class="cid-qIjMfqP1Ii" id="content7-k" data-sortbtn="btn-primary">  
-    <div class="container" id="data">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-12 align-center">
-                <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">Product Data</h2>
-            </div>
-            
-        </div>
-    </div>
-</section>
-<!-- tittle table end -->
-
-<!-- Porduct table -->
-<section class="features19 cid-qIjES4e5vV">
-  
-    <div class="container">
-        <h2 class="mbr-section-title align-left mbr-fonts-style display-2">
-            Product Table 🔥</h2>
-            <div class="table-wrapper-scroll-y my-custom-scrollbar">
-                <div class="table-responsive ">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr class="bg-warning">
-                                <th>#</th>
-                                <th>Product ID</th>
-                                <th>Product Name</th>
-                                <th>Product Price</th>
-                                <th>Update</th>
-                                <th>Delete</th>
-                            </tr>
-                        </thead>
-                        <!--Contact table to database  -->
-                        <tbody>
-                        <?php
-                            require "php/conn.php";
-                            $mysql = "select * from product";
-                            $result = $conection->query($mysql);
-
-                            if ($result->num_rows > 0) {
-                                $number = 1;
-                            while ($row = $result->fetch_assoc()) { 
-                                
-                                ?>
-                            <tr>
-                                <td  class="align-middle"><?php echo $number ;?></td>
-                                <td  class="align-middle"><?php echo $row['id'] ;?></td>
-                                <td  class="align-middle"><?php echo $row['product_name'] ;?></td>
-                                <td  class="align-middle"><?php echo $row['price'] ;?></td>
-                                <td><div class="mbr-section-btn"><a class="btn btn-sm btn-info   display-4" href="#">Update</a></div></td>
-                                <td><div class="mbr-section-btn"><a class="btn btn-sm btn-warning display-4" href="#">Remove</a></div></td>
-                            </tr>
-                            <?php  $number = $number +1 ;
-                                }
-                            } ?>
-                            
-                        </tbody>
-                    
-                        
-                    </table>
-                </div>
-            </div>
-        
-       
-    </div>
-</section>
-<!-- Porduct table End -->
 
 
 
@@ -229,7 +205,7 @@ require 'php/addproduct.php'
     <div class="container">
         <div class="row align-center justify-content-center align-items-center">
             <div class="logo-section col-sm-12 col-lg-4">
-                <a href="#" style=""><img src="assets/images/logo.png" height="128" alt="business html template" title="" style="height: 3.8rem;">
+                <a href="#"><img src="assets/images/logo.png" height="128" alt="business html template" title="" style="height: 3.8rem;">
                 Headfoo.</a>
 
             </div>

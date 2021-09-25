@@ -19,8 +19,12 @@
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/gallery/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
 </head>
 
@@ -31,9 +35,10 @@
         <nav class="navbar navbar-dropdown navbar-fixed-top collapsed">
             <div class="navbar-brand">
                 <!-- logo icon -->
-                <img src="assets/images/logo.png" alt=""><span>Plug it,Feel it.</span>
+                <img src="assets/images/logo.png" alt=""><span style="font-weight: 700;">Plug it,Feel it.</span>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -44,16 +49,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown navbar-nav-top-padding" data-app-modern-menu="true">
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="#home">
+                        <a class="nav-link link text-black display-4" href="index.php">
                             Home
                         </a>
-                        <a class="nav-link link text-black display-4" href="#about">
+                        <a class="nav-link link text-black display-4" href="about.html">
                             About
                         </a>
-                        <a class="nav-link link text-black display-4" href="#service">
+                        <a class="nav-link link text-black display-4" href="services.html">
                             Services
                         </a>
-                        <a class="nav-link link text-black display-4" href="#contact">
+                        <a class="nav-link link text-black display-4" href="contact.html">
                             Contact us
                         </a>
                     </li>
@@ -78,21 +83,26 @@
                     </a>
                 </div>
             </div>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-white display-4" href="#">BUY NOW</a></div>
+            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm display-4"
+                    style="background-color:black;padding: 13px 33px;" href="admin/admin.php">Admin login</a></div>
 
         </nav>
     </section>
     <!-- navbar section end -->
     <!-- heroic section -->
-    <section class="header3 cid-qIjDinvjPw mbr-fullscreen mbr-parallax-background" id="header3-4" data-sortbtn="btn-primary">
+    <section class="header3 cid-qIjDinvjPw mbr-fullscreen mbr-parallax-background" id="header3-4"
+        data-sortbtn="btn-primary">
         <div class="container align-left" id="home">
             <div class="row justify-content-center mbr-white">
                 <!-- <div class="media-container-column mbr-white col-md-12"> -->
                 <div class="mbr-white col-md-12">
-                    <h4 class="mbr-section-subtitle mbr-fonts-style align-left pb-2 display-5"><strong>THINKING OF BUYING A HEADPHONE?</strong></h4>
-                    <h1 class="mbr-section-title mbr-white mbr-fonts-style align-left display-1"><strong>Love us some good <br>quality music!</strong></h1>
+                    <h4 class="mbr-section-subtitle mbr-fonts-style align-left pb-2 display-5"><strong>THINKING OF
+                            BUYING A HEADPHONE?</strong></h4>
+                    <h1 class="mbr-section-title mbr-white mbr-fonts-style align-left display-1"><strong>Love us some
+                            good <br>quality music!</strong></h1>
 
-                    <div class="mbr-section-btn align-left"><a class="btn btn-lg btn-white display-4" href="#">Shopping Now</a></div>
+                    <div class="mbr-section-btn align-left"><a class="btn btn-lg display-4"
+                            style="background-color:black;padding: 13px 33px;" href="#">Shopping Now</a></div>
                 </div>
                 <!-- </div> -->
             </div>
@@ -111,7 +121,8 @@
             <div class="row justify-content-center">
                 <div class="col-12 col-md-12 align-center">
 
-                    <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2"><span style="font-weight: normal;">Find a quality and right headphones not easy</span></h2>
+                    <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2"><span
+                            style="font-weight: normal;">Find a quality and right headphones not easy</span></h2>
                 </div>
             </div>
         </div>
@@ -124,7 +135,10 @@
         <div class="container">
             <div class="media-container-row">
                 <div class="col-md-12">
-                    <p class="mbr-text m-0 mbr-fonts-style mbr-black display-7">Whether you are looking for high bass or you want to listen to some rock and roll, you always have the liberty to choose your type. Wireless Bluetooth headphones are a matter of craze among the youth at the moment. Reportedly, in 2017, the headphone sales rose to a figure of 368 million.</p>
+                    <p class="mbr-text m-0 mbr-fonts-style mbr-black display-7">Whether you are looking for high bass or
+                        you want to listen to some rock and roll, you always have the liberty to choose your type.
+                        Wireless Bluetooth headphones are a matter of craze among the youth at the moment. Reportedly,
+                        in 2017, the headphone sales rose to a figure of 368 million.</p>
                 </div>
             </div>
         </div>
@@ -165,7 +179,9 @@
                                 HEADPHONES
                             </h3>
                             <p class="mbr-card-text mbr-fonts-style align-left display-7">
-                                Experience the exact same elevated experience and also amazing audio UHP has actually been providing to auditorium, workshops and also living rooms for 50 years with Business Website Templates.
+                                Experience the exact same elevated experience and also amazing audio UHP has actually
+                                been providing to auditorium, workshops and also living rooms for 50 years with Business
+                                Website Templates.
                             </p>
 
                         </div>
@@ -185,7 +201,9 @@
                                 HEADPHONES
                             </h3>
                             <p class="mbr-card-text mbr-fonts-style align-left display-7">
-                                This is songs without any limitations. Surrender to Business Website Templates remarkable audio wrapped in ageless design. Let it have fun with your ideas, tinker your heart, or alter your strategies.
+                                This is songs without any limitations. Surrender to Business Website Templates
+                                remarkable audio wrapped in ageless design. Let it have fun with your ideas, tinker your
+                                heart, or alter your strategies.
                             </p>
 
                         </div>
@@ -205,7 +223,9 @@
                                 HEADPHONES
                             </h3>
                             <p class="mbr-card-text mbr-fonts-style align-left display-7">
-                                From the storage locker area to the lecture hall, you're constantly on the go with Business HTML Template. Pay attention for approximately 18 hours on a single cost, after that use Deep-Sleep setting to conserve power.
+                                From the storage locker area to the lecture hall, you're constantly on the go with
+                                Business HTML Template. Pay attention for approximately 18 hours on a single cost, after
+                                that use Deep-Sleep setting to conserve power.
                             </p>
 
                         </div>
@@ -234,28 +254,32 @@
                     <div class="mbr-gallery-layout-default">
                         <div>
                             <div>
-                            <?php
-                            require "php/conn.php";
-                            $mysql = "select * from product";
-                            $result = $conection->query($mysql);
+                                <?php
+                                require "admin/php/conn.php";
+                                $mysql = "select * from product";
+                                $result = $conection->query($mysql);
+                                if ($result->num_rows > 0) {
+                                    $number = 0;
+                                    while ($row = $result->fetch_assoc()) {
 
-                            if ($result->num_rows > 0) {
-                                $number = 0;
-                            while ($row = $result->fetch_assoc()) { 
-                                
                                 ?>
-                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false" data-tags="Awesome">
-                                    <div href="#lb-gallery1-6" data-slide-to="<?php echo $number ?>" data-toggle="modal">
-                                        <img src="assets/images/<?php echo $row['id'] ;?>.jpg" alt="">
+                                <div class="mbr-gallery-item mbr-gallery-item--p1" data-video-url="false"
+                                    data-tags="Awesome">
+                                    <div href="#lb-gallery1-6" data-slide-to="<?php echo $number ?>"
+                                        data-toggle="modal">
+                                        <img src="admin/assets/images/<?php echo $row['id']; ?>.jpg" alt="">
                                         <span class="icon-focus"></span>
-                                        <span class="mbr-gallery-title mbr-fonts-style display-7"><?php echo $row['product_name'];?> <br>
-                                            <small>Price <strong style="color: red;"><?php echo $row['price'] ;?>/-</strong></small></span>
+                                        <span
+                                            class="mbr-gallery-title mbr-fonts-style display-7"><?php echo $row['product_name']; ?>
+                                            <br>
+                                            <small>Price <strong
+                                                    style="color: red;"><?php echo $row['price']; ?>/-</strong></small></span>
                                     </div>
                                 </div>
-                                <?php  $number = $number +1 ;
-                                }
-                            } ?>
-                               
+                                <?php $number = $number + 1;
+                                    }
+                                } ?>
+
                             </div>
                         </div>
                         <div class="clearfix">
@@ -265,39 +289,41 @@
                 </div>
                 <!-- Lightbox -->
                 <?php
-                            $mysql = "select * from product";
-                            $result = $conection->query($mysql);
-                            if ($result->num_rows > 0) {
-                                $totalrows  = mysqli_num_rows($result) ;
-                                $number = 1 ; ?>
-                <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1" data-keyboard="true" data-interval="false" id="lb-gallery1-6">
+                $mysql = "select * from product";
+                $result = $conection->query($mysql);
+                if ($result->num_rows > 0) {
+                    $totalrows  = mysqli_num_rows($result);
+                    $number = 1; ?>
+                <div data-app-prevent-settings="" class="mbr-slider modal fade carousel slide" tabindex="-1"
+                    data-keyboard="true" data-interval="false" id="lb-gallery1-6">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-body">
                                 <div class="carousel-inner">
-                                <?php
-                            while ($row = $result->fetch_assoc()) { 
-                                
-                               
-                                    if( $number == $totalrows ){
-                                        echo "<div class='carousel-item active'>
-                                        <img src=assets/images/".$row['id'].".jpg >
-                                        </div>" ; 
-                                    }
-                                    else{
-                                        echo "<div class='carousel-item'>
-                                        <img src=assets/images/".$row['id'] .".jpg >
-                                        </div>" ;
-                                    }
-                                    $number = $number +1 ;
-                                }
-                                      
-                        } ?>
+                                    <?php
+                                        while ($row = $result->fetch_assoc()) {
+
+
+                                            if ($number == $totalrows) { ?>
+                                    <div class='carousel-item active'>
+                                        <img src="admin/assets/images/<?php echo $row['id'] . ".jpg" ?>" alt="">
+                                    </div> <?php
+                                                    } else { ?>
+                                    <div class='carousel-item'>
+                                        <img src="admin/assets/images/<?php echo $row['id'] . ".jpg" ?>" alt=""
+                                            srcset="">
+                                    </div> <?php
+                                                    }
+                                                    $number = $number + 1;
+                                                }
+                                            } ?>
                                 </div>
-                                <a class="carousel-control carousel-control-prev" role="button" data-slide="prev" href="#lb-gallery1-6">
+                                <a class="carousel-control carousel-control-prev" role="button" data-slide="prev"
+                                    href="#lb-gallery1-6">
                                     <span class="mbri-left mbr-iconfont" aria-hidden="true"></span>
                                     <span class="sr-only">Previous</span></a>
-                                <a class="carousel-control carousel-control-next" role="button" data-slide="next" href="#lb-gallery1-6">
+                                <a class="carousel-control carousel-control-next" role="button" data-slide="next"
+                                    href="#lb-gallery1-6">
                                     <span class="mbri-right mbr-iconfont" aria-hidden="true"></span>
                                     <span class="sr-only">Next</span>
                                 </a>
@@ -313,17 +339,21 @@
     </section>
     <!-- Products end -->
 
-    <section class="mbr-section info5 cid-qIjGVVeB7i" id="info5-9" data-sortbtn="btn-primary">
+    <section class="mbr-section info5 cid-qIjGVVeB7i" id="info5-9" data-sortbtn="btn-primary"
+        style="    color: #000;font-weight: 700">
 
         <div class="container">
             <div class="row justify-content-center content-row">
                 <div class="media-container-column title col-12 col-lg-7 col-md-6">
-                    <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5">
+                    <h3 class="mbr-section-subtitle align-left mbr-light pb-3 mbr-fonts-style display-5"
+                        style="    color: #000; font-weight: 700">
                         HURRY UP! THE OFFER IS LIMITED</h3>
-                    <h2 class="align-left mbr-bold mbr-fonts-style mbr-white mbr-section-title display-2">Like it? Pre-order and get a discount<br></h2>
+                    <h2 class="align-left mbr-bold mbr-fonts-style mbr-white mbr-section-title display-2">Like it?
+                        Pre-order and get a discount<br></h2>
                 </div>
                 <div class="media-container-column col-12 col-lg-3 col-md-4">
-                    <div class="mbr-section-btn align-right py-4"><a class="btn btn-white display-4" href="#">Order Now</a></div>
+                    <div class="mbr-section-btn align-right py-4"><a class="btn display-4"
+                            style="background-color:black;padding: 13px 33px;" href="#">Order Now</a></div>
                 </div>
             </div>
         </div>
@@ -331,7 +361,8 @@
     <!-- Services Section -->
     <section class="features8 cid-qIjI4pKeSS" id="features8-c" data-sortbtn="btn-primary">
         <div class="container" id="service">
-            <h2 class="mbr-section-title align-left mbr-fonts-style display-2">Why do you have to buy headphones only for us?</h2>
+            <h2 class="mbr-section-title align-left mbr-fonts-style display-2">Why do you have to buy headphones only
+                for us?</h2>
             <div class="row justify-content-center content-row pt-4">
                 <div class="card p-3 col-md-6 col-lg-3">
                     <div class="card-box">
@@ -341,7 +372,8 @@
                                 HIGH QUALITY</h4>
                         </div>
                         <p class="mbr-text card-text mbr-fonts-style  display-7">
-                            This is songs with no restrictions. Surrender to HTML Business Template exceptional sound wrapped in timeless style. <br><a href="#" class="text-warning">Learn More...</a>
+                            This is songs with no restrictions. Surrender to HTML Business Template exceptional sound
+                            wrapped in timeless style. <br><a href="#" class="text-warning">Learn More...</a>
                         </p>
                     </div>
                 </div>
@@ -353,7 +385,9 @@
                                 ORIGINAL DEVICES</h4>
                         </div>
                         <p class="mbr-text card-text mbr-fonts-style display-7">
-                            Let it have fun with your ideas, mess with your heart, or alter your strategies. Allow it take you back in time or to areas you've never gone before. <br><a href="#" class="text-warning">Learn More...</a>
+                            Let it have fun with your ideas, mess with your heart, or alter your strategies. Allow it
+                            take you back in time or to areas you've never gone before. <br><a href="#"
+                                class="text-warning">Learn More...</a>
                         </p>
                     </div>
                 </div>
@@ -364,7 +398,8 @@
                             <h4 class="card-title m-0 mbr-fonts-style mbr-bold display-5">YEAR WARRANTY</h4>
                         </div>
                         <p class="mbr-text card-text mbr-fonts-style  display-7">
-                            From the storage locker space to the lecture hall, you're constantly on the move with HTML Business Template. <br><a href="#" class="text-warning">Learn More...</a>
+                            From the storage locker space to the lecture hall, you're constantly on the move with HTML
+                            Business Template. <br><a href="#" class="text-warning">Learn More...</a>
                         </p>
                     </div>
                 </div>
@@ -375,7 +410,9 @@
                             <h4 class="card-title mbr-fonts-style m-0 mbr-bold display-5">WEEK TO CHECK</h4>
                         </div>
                         <p class="mbr-text card-text mbr-fonts-style display-7">
-                            Regularly on the move? Business Website Templates military-grade safeguards the headphones versus sweat, dampness as well as spills. <br><a href="#" class="text-warning">Learn More...</a>
+                            Regularly on the move? Business Website Templates military-grade safeguards the headphones
+                            versus sweat, dampness as well as spills. <br><a href="#" class="text-warning">Learn
+                                More...</a>
                         </p>
                     </div>
                 </div>
@@ -385,36 +422,18 @@
     </section>
     <!-- Services Section End -->
 
-    <!-- Contact section -->
-    <section class="cid-qIjKmBgNqd" id="content7-e" data-sortbtn="btn-primary">
-
-        <div class="container" id="contact">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-12 align-center">
-                    <h3 class="mbr-section-subtitle align-center mbr-fonts-style pb-2 display-5"><strong>STILL NOT CONVINCED?</strong></h3>
-                    <h2 class="mbr-section-title align-center mbr-fonts-style mbr-bold display-2">Visit us and see yourself!</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Contact section End -->
-
-    <!-- google-map -->
-    <section class="map1 cid-qIjKkTKkO4" id="map1-d" data-sortbtn="btn-primary">
-        <div class="google-map"><iframe frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0Dx_boXQiwvdz8sJHoYeZNVTdoWONYkU&amp;q=place_id:ChIJn6wOs6lZwokRLKy1iqRcoKw" allowfullscreen=""></iframe></div>
-    </section>
-
     <section class="cid-qIjMDc36tP" id="footer2-l" data-sortbtn="btn-primary">
 
         <div class="container">
             <div class="row align-center justify-content-center align-items-center">
                 <div class="logo-section col-sm-12 col-lg-4">
-                    <a href="#" style=""><img src="assets/images/logo.png" height="128" alt="business html template" title="" style="height: 3.8rem;">
+                    <a href="#" style="font-weight: 900;color: #000;font-size: 23px;"><img src="assets/images/logo.png"
+                            height="128" alt="business html template" title="" style="height: 3.8rem;">
                         Headfoo.</a>
 
                 </div>
                 <div class="col-sm-12 col-lg-4 mbr-text mbr-fonts-style mbr-light display-7">
-                    © 2021 All Rights Reserved Terms of Use and Privacy Policy
+                    © 2021 All Rights Reserved Terms of Learning Purpose
                 </div>
                 <div class="social-media col-sm-12 col-lg-4">
                     <ul>
@@ -448,8 +467,93 @@
             </div>
         </div>
     </section>
+    <!-- chatbox start-->
+
+    <button type="button" class="open-button" onclick="openForm()"><i style="font-size:31px;"
+            class="far fa-comments-alt"></i></button>
+
+    <div class="chat-popup" id="myForm">
+        <form class="form-container">
+            <div class="wrapper">
+                <div class="title">Chatbot</div>
+                <div class="form">
+                    <div class="bot-inbox inbox">
+                        <div class="icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="msg-header">
+                            <p>Hello there, how can I help you?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="typing-field">
+                    <div class="input-data">
+                        <input id="data" type="text" placeholder="Type something here.." required>
+                        <button id="send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
 
 
+            <button type="button" class="btn cancel" onclick="closeForm()"><i style="font-size: 33px;"
+                    class="fas fa-times-circle"></i></button>
+        </form>
+    </div>
+    <a href="#" id="scroll" style="display: none;"><span></span></a>
+    <!-- chatbox end-->
+
+    <script>
+    $(document).ready(function() {
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 100) {
+                $('#scroll').fadeIn();
+            } else {
+                $('#scroll').fadeOut();
+            }
+        });
+        $('#scroll').click(function() {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 600);
+            return false;
+        });
+    });
+    </script>
+    <script>
+    function openForm() {
+        document.getElementById("myForm").style.display = "block";
+    }
+
+    function closeForm() {
+        document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+    <script>
+    $(document).ready(function() {
+        $("#send-btn").on("click", function() {
+            $value = $("#data").val();
+            $msg = '<div class="user-inbox inbox"><div class="msg-header"><p>' + $value +
+                '</p></div></div>';
+            $(".form").append($msg);
+            $("#data").val('');
+
+            // start ajax code
+            $.ajax({
+                url: 'message.php',
+                type: 'POST',
+                data: 'text=' + $value,
+                success: function(result) {
+                    $replay =
+                        '<div class="bot-inbox inbox"><div class="icon"><i class="fas fa-user"></i></div><div class="msg-header"><p>' +
+                        result + '</p></div></div>';
+                    $(".form").append($replay);
+                    // when chat goes down the scroll bar automatically comes to the bottom
+                    $(".form").scrollTop($(".form")[0].scrollHeight);
+                }
+            });
+        });
+    });
+    </script>
     <script src="assets/web/assets/jquery/jquery.min.js"></script>
     <script src="assets/popper/popper.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
